@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/style_index.css" />
+    <link
+      rel="shortcut icon"
+      href="/static/顔認証アイコン2.png"
+      type="image/x-icon" />
+
+    <title>顔認証</title>
+  </head>
+
+  <body>
+    <!-- ロード画面 -->
+    <div class="container">
+      <div class="loader-wrapper">
+        <div class="loader">
+          <img src="/static/neontomcat.gif" alt="Loading..." />
+        </div>
+      </div>
+
+      <!-- トップ　タイトル -->
+      <div class="background">
+        <div class="top">
+          <h1>This Is Gorilla</h1>
+          <p>
+            本アプリはゴリラか否かを認証します。（※ゴリラに似ている場合も認証される場合がございます）
+          </p>
+        </div>
+
+        <!-- 画像登録ボタン -->
+        <div class="container">
+          <form action="result" method="POST" enctype="multipart/form-data">
+            <input
+              type="file"
+              name="image"
+              accept="image/*"
+              required
+              id="neon-button-one" />
+            <div id="neon-button-two">
+              <button type="submit">🍌 判定開始 🍌</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <script>
+        window.addEventListener("load", function () {
+          const loader = document.querySelector(".loader-wrapper");
+          loader.className += " hidden";
+        });
+      </script>
+    </div>
+  </body>
+</html>

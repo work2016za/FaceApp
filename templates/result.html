@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/style_result.css" />
+    <link
+      rel="shortcut icon"
+      href="/static/顔認証アイコン2.png"
+      type="image/x-icon" />
+    <title>認証結果</title>
+  </head>
+
+  <body>
+    {% if result=="椋野さん" %}
+    <!-- 検索結果を表示する -->
+    <!-- 結果が椋野さんの時の処理 -->
+    <div class="neontext">
+      <h1>顔認証の結果</h1>
+      <h2>{{ auth_probability }} の確率でゴリラです</h2>
+
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script> -->
+      {% else %}
+      <h1>顔認証の結果</h1>
+      <h2>{{ auth_probability }} の確率でゴリラではありません</h2>
+      {% endif %}
+    </div>
+
+    <div class="return">
+      <a href="/">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>認証ページへ戻る</a
+      >
+    </div>
+  </body>
+</html>
